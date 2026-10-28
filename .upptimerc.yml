@@ -3,6 +3,12 @@
 # HTTP clients. Every check below uses a path the firewall's "bypass
 # server-to-server callers" rule exempts (/api/health, /.well-known/*), or a
 # site with no challenge, so a check fails only when the site does.
+#
+# The org keeps workflow tokens read-only by default and Upptime falls back to
+# that token (no PAT), so each workflow declares contents/issues write itself.
+# Setup, Update Template and Updates are disabled: they regenerate workflow
+# files, which that token cannot push, and two run unpinned @master actions.
+# To change workflows, edit them here by hand.
 owner: Chubby-Club
 repo: status
 
