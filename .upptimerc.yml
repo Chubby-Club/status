@@ -1,31 +1,54 @@
-# Change these first
-owner: upptime # Your GitHub organization or username, where this repository lives
-repo: upptime # The name of this repository
+# Chubby Club status page (CLUB-6562): status.chubbyclub.com.
+# The sites sit behind Vercel Bot Protection (CLUB-6551), which challenges plain
+# HTTP clients. Every check below uses a path the firewall's "bypass
+# server-to-server callers" rule exempts (/api/health, /.well-known/*), or a
+# site with no challenge, so a check fails only when the site does.
+owner: Chubby-Club
+repo: status
 
 sites:
-  - name: Google
-    url: https://www.google.com
-  - name: Wikipedia
-    url: https://en.wikipedia.org
-  - name: Hacker News
-    url: https://news.ycombinator.com
-  - name: Secret Site
-    url: $SECRET_SITE
+  - name: Chubby Club
+    url: https://chubbyclub.com/
+  - name: Join
+    url: https://join.chubbyclub.com/api/health
+  - name: Plus
+    url: https://plus.chubbyclub.com/api/health
+  - name: Sign-in service
+    url: https://id.chubbyclub.com/.well-known/openid-configuration
+  - name: Member profile
+    url: https://my.chubbyclub.com/api/health
+  - name: Reservations
+    url: https://reserve.chubbyclub.com/api/health
+  - name: Verification
+    url: https://verify.chubbyclub.com/api/health
+  - name: Promotions
+    url: https://promo.chubbyclub.com/api/health
+  - name: Create
+    url: https://create.chubbyclub.com/api/health
+  - name: Thank you
+    url: https://ty.chubbyclub.com/api/health
+  - name: Attend
+    url: https://attend.chubbyclub.com/api/health
+  - name: Partners
+    url: https://partner.chubbyclub.com/api/health
+  - name: Partner API
+    url: https://api.chubbyclub.com/
+  - name: Hub
+    url: https://a5.chubbyclub.com/api/health
+  - name: Legal
+    url: https://legal.chubbyclub.com/api/health
 
 status-website:
-  # Add your custom domain name, or remove the `cname` line if you don't have a domain
-  # Uncomment the `baseUrl` line if you don't have a custom domain and add your repo name there
-  cname: demo.upptime.js.org
-  # baseUrl: /your-repo-name
-  logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
-  name: Upptime
-  introTitle: "**Upptime** is the open-source uptime monitor and status page, powered entirely by GitHub."
-  introMessage: This is a sample status page which uses **real-time** data from our [GitHub repository](https://github.com/upptime/upptime). No server required — just GitHub Actions, Issues, and Pages. [**Get your own for free**](https://github.com/upptime/upptime)
+  cname: status.chubbyclub.com
+  logoUrl: https://raw.githubusercontent.com/Chubby-Club/status/master/assets/logo.png
+  name: Chubby Club Status
+  theme: dark
+  introTitle: "Chubby Club status"
+  introMessage: Every Chubby Club site, checked every 5 minutes.
   navbar:
     - title: Status
       href: /
-    - title: GitHub
-      href: https://github.com/$OWNER/$REPO
+    - title: Chubby Club
+      href: https://chubbyclub.com
 
-# Upptime also supports notifications, assigning issues, and more
-# See https://upptime.js.org/docs/configuration
+# Notifications and issue assignment: https://upptime.js.org/docs/configuration
