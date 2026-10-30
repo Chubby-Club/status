@@ -1,0 +1,13 @@
+# Keeps the SHA-pinned GitHub Actions current (CLUB-6644). Each `uses:` is pinned
+# to a full commit SHA with its version as a comment; Dependabot moves both.
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 3
+    # Version updates wait 7 days after a release (CLUB-6644); security
+    # updates never wait.
+    cooldown:
+      default-days: 7
