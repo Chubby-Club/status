@@ -36,6 +36,16 @@ With [Upptime](https://upptime.js.org), you can get your own unlimited and free 
 
 [**Visit our status website →**](https://status.chubbyclub.com)
 
+## 🛠️ Scheduled maintenance (staff)
+
+An open issue labeled `maintenance` puts a maintenance window on the status page and pauses outage reports for the sites it names. Only Chubby Club staff can declare one:
+
+1. Open an issue from the **Maintenance Event** template. Fill in `start`, `end` (ISO 8601, UTC) and `expectedDown` (site slugs, comma-separated) in the comment block.
+2. Add the `maintenance` label. The template no longer adds it, and only people with triage access can add labels.
+3. Close the issue when the work is done.
+
+The [Maintenance guard](./.github/workflows/maintenance-guard.yml) workflow closes any issue that has the `maintenance` label but whose author is not an owner, org member or collaborator, and removes the label.
+
 ## 📄 License
 
 - Powered by: [Upptime](https://github.com/upptime/upptime)
